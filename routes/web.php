@@ -71,6 +71,10 @@ Route::get('/linkstorage', function () {
     Route::get('/about', 'AboutController@index')->name('admin.about');
     Route::put('/about', 'AboutController@update')->name('admin.about.update');
 
+
+    Route::get('/description', 'DescriptionController@index')->name('admin.description');
+    Route::put('/description', 'DescriptionController@update')->name('admin.description.update');
+
  });
 
 

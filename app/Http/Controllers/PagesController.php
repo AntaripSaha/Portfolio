@@ -12,8 +12,8 @@ use App\Portfolio;
 use App\Testimonial;
 use App\Team;
 use App\About;
-
-
+use App\Description;
+use Symfony\Component\Console\Descriptor\Descriptor;
 
 class PagesController extends Controller
 {
@@ -26,10 +26,11 @@ class PagesController extends Controller
         $portfolios = Portfolio::All();
         $testimonials = Testimonial::All();
         $teams = Team::All();
+        $description = Description::first();
 
 
 
-        return view('frontend.index', compact('data', 'main', 'services', 'categories', 'portfolios','testimonials','teams'));
+        return view('frontend.index', compact('data', 'main', 'services', 'categories', 'portfolios','testimonials','teams','description'));
 
     }
     public function about(){

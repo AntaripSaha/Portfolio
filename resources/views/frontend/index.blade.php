@@ -159,7 +159,7 @@
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>Services</h2>
-          <p> We Provide Best Services in this Field. Check Us, Before taking the Service. </p>
+          <p> {{$description->service_description}} </p>
         </div>
         <div class="row gy-4">
                   @if (count($services)>0)
@@ -207,7 +207,7 @@
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>Image Gallery</h2>
-          <p>You Can Be A Part Of These Beautiful Moments</p>
+          <p>{{$description->img_description}} </p>
         </div>
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
@@ -239,7 +239,7 @@
         <div class="container" data-aos="fade-up">
             <div class="section-header">
               <h2>Testimonials</h2>
-              <p>People Who Care Us</p>
+              <p>{{$description->testimonial_description}}</p>
             </div>
                   <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
                         <div class="swiper-wrapper">
@@ -272,7 +272,7 @@
         <div class="row">
           <div class="col-lg-9 text-center text-lg-start">
             <h3 class="cta-title">Call To Action</h3>
-            <p class="cta-text">Our Support Team Are Always Ready To Surve You. So, Give Us A Shot</p>
+            <p class="cta-text">{{$description->call_description}} </p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
             <a class="cta-btn align-middle" href="tel:{{$data->phone}}">Call To Action</a>
@@ -286,6 +286,7 @@
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>Our Team</h2>
+          <p class="cta-text">{{$description->team_description}} </p>
         </div>
         <div class="row">
           @foreach ($teams as $team)
@@ -314,7 +315,7 @@
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>Contact Us</h2>
-          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+          <p>{{$description->contact_description}} </p>
         </div>
 
         <div class="row contact-info">
@@ -347,7 +348,8 @@
       </div>
 
       <div class="container mb-4">
-        <iframe src="https://maps.google.com/maps?q=uttara%20sector%2011,%20road%208&t=&z=19&ie=UTF8&iwloc=&output=embed" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+        {!! $description->map !!}
+        {{-- <iframe src="https://maps.google.com/maps?q=uttara%20sector%2011,%20road%208&t=&z=19&ie=UTF8&iwloc=&output=embed" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe> --}}
       </div>
 
       {{-- <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=uttara%20sector%2011,%20road%208&t=&z=19&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://soap2day-to.com">soap2day</a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></div> --}}

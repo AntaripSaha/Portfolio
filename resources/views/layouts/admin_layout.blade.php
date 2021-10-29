@@ -133,6 +133,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tasks"></i></div>
                                 About
                             </a>
+                            <a class="nav-link" href="{{route('admin.description')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-file-alt"></i></div>
+                                Description
+                            </a>
                             
                             <a class="nav-link" href="{{url('/linkstorage')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-power-off"></i></div>
